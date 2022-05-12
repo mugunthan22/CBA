@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="apitest.Testcase">
+        <methods>
+          <include name="Cleanup"/>
+          <include name="LoginwithInvalidUser"/>
+          <include name="LoginwithNewlyCreatedUser"/>
+          <include name="RegisterUserPass"/>
+          <include name="GetAllUserScore"/>
+          <include name="RegisterUserFailed"/>
+          <include name="iAmAnAuthorizedUser"/>
+        </methods>
+      </class> <!-- apitest.Testcase -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
