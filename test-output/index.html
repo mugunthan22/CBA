@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Test_Suite" class="navigator-link ">
-                    <span>testng.xml</span>
+                    <span>TestNG.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Test_Suite" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Test_Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="DeleteUserScore">DeleteUserScore</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test_Suite" title="uitest.TestCase" class="method navigator-link" hash-for-method="RegisterUser">RegisterUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Test_Suite -->
@@ -118,37 +118,7 @@
                     <div class="method-list-content passed suite-Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="GetAllUserScore">GetAllUserScore</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="InsertUserScore">InsertUserScore</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="LoginwithInvalidUser">LoginwithInvalidUser</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="LoginwithNewlyCreatedUser">LoginwithNewlyCreatedUser</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="RegisterUserFailed">RegisterUserFailed</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="RegisterUserPass">RegisterUserPass</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Test_Suite" title="apitest.Testcase" class="method navigator-link" hash-for-method="UpdateUserScore">UpdateUserScore</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Test_Suite" title="Precondition" class="method navigator-link" hash-for-method="LoadProperties(firefox)">LoadProperties(firefox)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Test_Suite -->
@@ -166,17 +136,20 @@
           <div class="suite-Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">apitest.Testcase</span>
+              <span class="class-name">uitest.TestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="DeleteUserScore">
-                  </a> <!-- DeleteUserScore -->
-                  <span class="method-name">DeleteUserScore</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Not able to delete user in Leaderboard. Content of failed Response: io.restassured.internal.RestAssuredResponseImpl@70d3cdbf , Status Code : 401
-	at api.EndPoints.DeleteUserinLeaderBoard(EndPoints.java:133)
-	at apitest.Testcase.DeleteUserScore(Testcase.java:172)
+                  <a name="RegisterUser">
+                  </a> <!-- RegisterUser -->
+                  <span class="method-name">RegisterUser</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at selenium.pages.LoginPage.signup(LoginPage.java:67)
+	at uitest.TestCase.RegisterUser(TestCase.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -187,56 +160,15 @@
           <div class="suite-Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">apitest.Testcase</span>
+              <span class="class-name">Precondition</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GetAllUserScore">
-                  </a> <!-- GetAllUserScore -->
-                  <span class="method-name">GetAllUserScore</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="InsertUserScore">
-                  </a> <!-- InsertUserScore -->
-                  <span class="method-name">InsertUserScore</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginwithInvalidUser">
-                  </a> <!-- LoginwithInvalidUser -->
-                  <span class="method-name">LoginwithInvalidUser</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginwithNewlyCreatedUser">
-                  </a> <!-- LoginwithNewlyCreatedUser -->
-                  <span class="method-name">LoginwithNewlyCreatedUser</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="RegisterUserFailed">
-                  </a> <!-- RegisterUserFailed -->
-                  <span class="method-name">RegisterUserFailed</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="RegisterUserPass">
-                  </a> <!-- RegisterUserPass -->
-                  <span class="method-name">RegisterUserPass</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="UpdateUserScore">
-                  </a> <!-- UpdateUserScore -->
-                  <span class="method-name">UpdateUserScore</span>
+                  <a name="LoadProperties(firefox)">
+                  </a> <!-- LoadProperties(firefox) -->
+                  <span class="method-name">LoadProperties</span>
+                  <span class="parameters">(firefox)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -244,22 +176,27 @@
         </div> <!-- panel Test_Suite -->
         <div panel-name="test-xml-Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/home/mugundhan/eclipse-workspace/github/CBA/testng.xml</span>
+            <span class="header-content">/home/mugundhan/eclipse-workspace/github/CBA/TestNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;firefox&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;report.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Admin Tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Pre-Condition&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;apitest.Testcase&quot;/&gt;
+      &lt;class name=&quot;Precondition&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Admin Tests --&gt;
+  &lt;/test&gt; &lt;!-- Pre-Condition --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;UI Tests&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;uitest.TestCase&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- UI Tests --&gt;
 &lt;/suite&gt; &lt;!-- Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -271,7 +208,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Admin Tests (1 class)</span>
+                <span class="test-name">Pre-Condition (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">UI Tests (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -297,44 +237,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(8);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'InsertUserScore')
-data.setCell(0, 2, 'apitest.Testcase')
-data.setCell(0, 3, 6481);
+data.setCell(0, 1, 'LoadProperties')
+data.setCell(0, 2, 'Precondition')
+data.setCell(0, 3, 1150);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'UpdateUserScore')
-data.setCell(1, 2, 'apitest.Testcase')
-data.setCell(1, 3, 6243);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'LoginwithNewlyCreatedUser')
-data.setCell(2, 2, 'apitest.Testcase')
-data.setCell(2, 3, 3958);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'LoginwithInvalidUser')
-data.setCell(3, 2, 'apitest.Testcase')
-data.setCell(3, 3, 2656);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'RegisterUserPass')
-data.setCell(4, 2, 'apitest.Testcase')
-data.setCell(4, 3, 2231);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'DeleteUserScore')
-data.setCell(5, 2, 'apitest.Testcase')
-data.setCell(5, 3, 1858);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'GetAllUserScore')
-data.setCell(6, 2, 'apitest.Testcase')
-data.setCell(6, 3, 1787);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'RegisterUserFailed')
-data.setCell(7, 2, 'apitest.Testcase')
-data.setCell(7, 3, 1526);
+data.setCell(1, 1, 'RegisterUser')
+data.setCell(1, 2, 'uitest.TestCase')
+data.setCell(1, 3, 113);
 window.suiteTableData['Test_Suite']= { tableData: data, tableDiv: 'times-div-Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Test_Suite">
               </div> <!-- times-div-Test_Suite -->
             </div> <!-- times-div -->
@@ -360,81 +276,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">apitest.Testcase</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">iAmAnAuthorizedUser</span>
+              <div class="chronological-class-name">Precondition</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">LoadProperties(firefox)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">5667 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">GetAllUserScore</span>
-                <span class="method-start">5670 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">7463 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">LoginwithInvalidUser</span>
-                <span class="method-start">7465 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">10124 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">RegisterUserPass</span>
-                <span class="method-start">10126 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">12362 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">RegisterUserFailed</span>
-                <span class="method-start">12363 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">13892 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">LoginwithNewlyCreatedUser</span>
-                <span class="method-start">13894 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">17854 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">InsertUserScore</span>
-                <span class="method-start">17856 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">24339 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">UpdateUserScore</span>
-                <span class="method-start">24340 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeNewRequest</span>
-                <span class="method-start">30585 ms</span>
-              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">uitest.TestCase</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">DeleteUserScore</span>
-                <span class="method-start">30587 ms</span>
+                <span class="method-name">RegisterUser</span>
+                <span class="method-start">1758 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">Cleanup</span>
-                <span class="method-start">32452 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

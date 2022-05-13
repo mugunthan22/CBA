@@ -20,7 +20,7 @@ import api.response.IAPIResponse;
 import config.Configuration;
 import entity.User;
 import entity.UserRequest;
-import entity.Users;
+
 import io.restassured.response.Response;
 import report.ExtentTestManager;
 
@@ -36,8 +36,7 @@ public class Testcase {
     @BeforeTest
    public void iAmAnAuthorizedUser() {
     	
-    	Configuration.propertyFilePath= System.getProperty("user.dir") +"/src/test/resources/configs/configuration.properties";
-    	Configuration.getInstance();
+    	
     	endPoints = new EndPoints();   
     	Assert.assertTrue(endPoints.VerifyToken(),"Verification of AUthorization to access API feature is failed");
     	

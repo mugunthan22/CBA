@@ -9,21 +9,21 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Test Suite</th></tr>
-<tr><td><a href="#t0">Admin Tests</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">32,459</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Pre-Condition</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">1,219</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">UI Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">127</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">1,346</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Admin Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">apitest.Testcase</td><td><a href="#m0">DeleteUserScore</a></td><td rowspan="1">1652383023638</td><td rowspan="1">1858</td></tr><tr><th colspan="4">Admin Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">apitest.Testcase</td><td><a href="#m1">GetAllUserScore</a></td><td rowspan="1">1652382998721</td><td rowspan="1">1787</td></tr><tr class="passedeven"><td><a href="#m2">InsertUserScore</a></td><td rowspan="1">1652383010907</td><td rowspan="1">6481</td></tr><tr class="passedeven"><td><a href="#m3">LoginwithInvalidUser</a></td><td rowspan="1">1652383000516</td><td rowspan="1">2656</td></tr><tr class="passedeven"><td><a href="#m4">LoginwithNewlyCreatedUser</a></td><td rowspan="1">1652383006945</td><td rowspan="1">3958</td></tr><tr class="passedeven"><td><a href="#m5">RegisterUserFailed</a></td><td rowspan="1">1652383005414</td><td rowspan="1">1526</td></tr><tr class="passedeven"><td><a href="#m6">RegisterUserPass</a></td><td rowspan="1">1652383003177</td><td rowspan="1">2231</td></tr><tr class="passedeven"><td><a href="#m7">UpdateUserScore</a></td><td rowspan="1">1652383017391</td><td rowspan="1">6243</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Pre-Condition &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Precondition</td><td><a href="#m0">LoadProperties</a></td><td rowspan="1">1652401677656</td><td rowspan="1">1150</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">UI Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">uitest.TestCase</td><td><a href="#m1">RegisterUser</a></td><td rowspan="1">1652401679414</td><td rowspan="1">113</td></tr></tbody>
 </table>
-<h2>Admin Tests</h2><h3 id="m0">apitest.Testcase#DeleteUserScore</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Not able to delete user in Leaderboard. Content of failed Response: io.restassured.internal.RestAssuredResponseImpl@70d3cdbf , Status Code : 401
-	at api.EndPoints.DeleteUserinLeaderBoard(EndPoints.java:133)
-	at apitest.Testcase.DeleteUserScore(Testcase.java:172)
+<h2>Pre-Condition</h2><h3 id="m0">Precondition#LoadProperties</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>firefox</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>UI Tests</h2><h3 id="m1">uitest.TestCase#RegisterUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
+	at selenium.pages.LoginPage.signup(LoginPage.java:67)
+	at uitest.TestCase.RegisterUser(TestCase.java:28)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">apitest.Testcase#GetAllUserScore</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">apitest.Testcase#InsertUserScore</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">apitest.Testcase#LoginwithInvalidUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">apitest.Testcase#LoginwithNewlyCreatedUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">apitest.Testcase#RegisterUserFailed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">apitest.Testcase#RegisterUserPass</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">apitest.Testcase#UpdateUserScore</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

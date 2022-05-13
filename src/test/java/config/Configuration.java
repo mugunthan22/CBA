@@ -46,6 +46,30 @@ public  class Configuration {
         if(APITOKEN != null) return APITOKEN;
         else throw new RuntimeException("APITOKEN not specified in the properties file.");
     }
+    public String getAPPLICATIONURL() {
+        String APPLICATIONURL = properties.getProperty("APPLICATIONURL");
+        if(APPLICATIONURL != null) return APPLICATIONURL;
+        else throw new RuntimeException("APPLICATIONURL not specified in the properties file.");
+    }
+    public String getBROWSERTYPE() {
+        String BROWSERTYPE = properties.getProperty("BROWSERTYPE");
+        if(BROWSERTYPE != null) return BROWSERTYPE;
+        else throw new RuntimeException("BROWSERTYPE not specified in the properties file.");
+    }
+    
+    public String getCHROMEDRIVERPATH() {
+        String CHROMEDRIVERPATH = properties.getProperty("CHROMEDRIVERPATH");
+        if(CHROMEDRIVERPATH != null) return CHROMEDRIVERPATH;
+        else throw new RuntimeException("CHROMEDRIVERPATH not specified in the properties file.");
+    }
+    
+    public String getFIREFOXDRIVERPATH() {
+        String FIREFOXDRIVERPATH = properties.getProperty("FIREFOXDRIVERPATH");
+        if(FIREFOXDRIVERPATH != null) return FIREFOXDRIVERPATH;
+        else throw new RuntimeException("FIREFOXDRIVERPATH not specified in the properties file.");
+    }
+    
+    
 
   
 }

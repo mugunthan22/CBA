@@ -6,10 +6,14 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ExtentManager {
     private static ExtentReports extent;
-    private static String reportFileName = "Test-Automaton-Report"+".html";
+    static SimpleDateFormat date = new SimpleDateFormat("yyyyMMddHHmmss");
+    static String timeStamp = date.format(new Date());
+    private static String reportFileName = "Report"+timeStamp +".html";
     private static String fileSeperator = System.getProperty("file.separator");
     private static String reportFilepath = System.getProperty("user.dir") +fileSeperator+ "TestReport";
     private static String reportFileLocation =  reportFilepath +fileSeperator+ reportFileName;

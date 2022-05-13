@@ -13,7 +13,6 @@ import api.response.IAPIResponse;
 import config.Configuration;
 import entity.User;
 import entity.UserRequest;
-import entity.Users;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
